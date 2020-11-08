@@ -4,16 +4,7 @@
     <link rel="stylesheet" href="swiper.min.css">
 </head>
 <style>
-    /* body{
-        margin: 0%;
-        padding: 0%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        background: #383838;
-        font-family: 'Poppin',sans-serif;
-    } */
+ 
     .card{
         position: relative;
         background: #e21919;
@@ -56,6 +47,27 @@ font-weight: 600;
 .swiper-slide{
     width: 400px;
 }
+#cloud {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+       background: url(cloud.png);
+       
+       animation: animate 50s linear infinite ;
+        
+    }
+    @keyframes animate
+    {
+        0%{
+            background-position: 0px;
+        }
+        100%{
+            background-position: 544px;
+        }
+    }
 </style>
 <?php 
 include("components/header.php"); 
@@ -67,7 +79,9 @@ include("components/navbar.php");
 ?>
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center">
-    <div class="container">
+  <div id="cloud">
+</div>
+ <div class="container">
       <div class="row justify-left">
         <div class="col-xl-8">
           <!-- <img src="assets/img/logo.png" class="logo-width-hero"> -->
